@@ -10,6 +10,8 @@
         ],
         "skipLibCheck": true,
         "sourceMap": true,
+        "declaration": true,
+        "declarationDir": "./build/declaration",
         "outDir": "./build",
         "moduleResolution": "node",
         "removeComments": true,
@@ -17,8 +19,6 @@
         "strictNullChecks": true,
         "strictFunctionTypes": true,
         "noImplicitThis": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
         "allowSyntheticDefaultImports": true,
@@ -29,7 +29,8 @@
         "baseUrl": "."
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "src/__tests__"
     ],
     "include": [
         "./src/**/*.tsx",

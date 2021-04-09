@@ -1,0 +1,11 @@
+<mjml>
+	<mj-body
+		><mj-button
+			font-family="Helvetica"
+			background-color="#f45e43"
+			color="white"
+		>
+			{{ $name }}
+		</mj-button>
+	</mj-body>
+</mjml>
