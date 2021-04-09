@@ -5,7 +5,9 @@
   "version": "1.0.0",
   "description": "Parse MJML files as templates and add variables to make them customizable",
   "main": "build/index.js",
+  "types": "build/declaration/index.d.ts",
   "scripts": {
+    "prepublish": "tsc",
     "dev:start": "tsc && concurrently \"tsc -w\" \"nodemon --trace-warnings\"",
     "dev:jest": "npx jest --watch --detectOpenHandles"
   },
