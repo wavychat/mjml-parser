@@ -7,9 +7,9 @@ interface IVariables {
 	[variable: string]: string;
 }
 
-type TMJML2HTML = (
+type TMJML2HTML = <IVars extends IVariables = IVariables>(
 	mjml_path: string,
-	vars?: IVariables,
+	vars?: Partial<IVars>,
 	options?: MJMLParsingOptions
 ) => Promise<string>;
 
@@ -34,7 +34,7 @@ export const mjml2HTML: TMJML2HTML = async (
 			const value = vars[name];
 			mjml_code = mjml_code.replace(
 				new RegExp(`{{ \\$${name} }}`, "gm"),
-				value
+				value!
 			);
 		}
 
