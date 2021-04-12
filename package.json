@@ -2,7 +2,7 @@
   "name": "@wavychat/mjml-parser",
   "author": "yoyo1234",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Parse MJML files as templates and add variables to make them customizable",
   "main": "build/index.js",
   "types": "build/declaration/index.d.ts",
