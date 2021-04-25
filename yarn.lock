@@ -583,7 +583,7 @@
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
 
-"@types/mjml-core@*":
+"@types/mjml-core@*", "@types/mjml-core@^4.7.0":
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/@types/mjml-core/-/mjml-core-4.7.0.tgz#8fc4510ac7927795be1218042222f3dd98cee433"
   integrity sha512-sjdnVUQCZMRCXNuIve6OmB/pyoCV0wPbc5UV+VDNE/qTrM5ObJiOGpSVjwh2Kv7AEvPMP3hBh+xB6ERdN/ZPvg==

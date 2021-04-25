@@ -2,7 +2,7 @@
   "name": "@wavychat/mjml-parser",
   "author": "yoyo1234",
   "private": false,
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Parse MJML files as templates and add variables to make them customizable",
   "main": "build/index.js",
   "types": "build/declaration/index.d.ts",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "@types/mjml": "^4.7.0",
+    "@types/mjml-core": "^4.7.0",
     "@types/node": "^14.14.37",
     "concurrently": "^6.0.1",
     "jest": "^26.6.3",
