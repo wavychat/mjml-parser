@@ -46,15 +46,15 @@ The variables must use be between handlebars:
 
 ```html
 <mjml>
-	<mj-body>
-		<mj-button
-			font-family="Helvetica"
-			background-color="#f45e43"
-			color="white"
-		>
-			{{ $your_variable_name }}
-		</mj-button>
-	</mj-body>
+  <mj-body>
+    <mj-button
+      font-family="Helvetica"
+      background-color="#f45e43"
+      color="white"
+    >
+        {{ $your_variable_name }}
+    </mj-button>
+  </mj-body>
 </mjml>
 ```
 
@@ -64,9 +64,9 @@ You need to call the function that you imported:
 
 ```ts
 mjml2HTML(
-	"absolute path to file mjml file",
-	{ your_variable_name: "your_value" },
-	{ ...mjmlOptions }
+    "absolute path to file mjml file",
+    { your_variable_name: "your_value" },
+    { ...mjmlOptions }
 );
 ```
 
@@ -78,14 +78,14 @@ import { mjml2HTML, IGenericVariables } from "../src/index";
 
 // IT'S REQUIRED TO EXTEND FROM `IGenericVariables`
 interface IMJMLVariables extends IGenericVariables {
-	username: string;
-	name: string;
+    username: string;
+    name: string;
 }
 
 mjml2HTML<IMJMLVariables>(
-	"absolute path to file mjml file",
-	all_your_typed_options,
-	{ ...mjmlOptions }
+    "absolute path to file mjml file",
+    all_your_typed_options,
+    { ...mjmlOptions }
 );
 ```
 ### MJML options
