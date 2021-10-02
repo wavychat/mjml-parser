@@ -4,8 +4,12 @@ Parse MJML files as templates and add variables to make them customizable
 
 ## Installation
 
-> yarn add @wavychat/mjml-parser
-> npm install @wavychat/mjml-parser
+```bash
+yarn add @wavychat/mjml-parser
+```
+```bash
+npm install @wavychat/mjml-parser
+```
 
 ## How to use:
 
@@ -46,7 +50,7 @@ The variables must use be between handlebars:
 </mjml>
 ```
 
-### Get HTML
+### Generate HTML
 
 You need to call the function that you imported:
 
@@ -58,6 +62,24 @@ mjml2HTML(
 );
 ```
 
+### Typescript
+Now a days, it's common to use Typescript in projects.\
+You can type the variables by using typescript genercis:
+```ts
+import { mjml2HTML, IGenericVariables } from "../src/index";
+
+// IT'S REQUIRED TO EXTEND FROM `IGenericVariables`
+interface IMJMLVariables extends IGenericVariables {
+	username: string;
+	name: string;
+}
+
+mjml2HTML<IMJMLVariables>(
+	"absolute path to file mjml file",
+	all_your_typed_options,
+	{ ...mjmlOptions }
+);
+```
 ### MJML options
 
 Please read [the official documentation](https://github.com/mjmlio/mjml#inside-nodejs) to have all the official options
