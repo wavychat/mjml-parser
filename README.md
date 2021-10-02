@@ -2,6 +2,14 @@
 
 Parse MJML files as templates and add variables to make them customizable
 
+## Table of Content
+
+- [Installation](https://github.com/wavychat/mjml-parser#installation)
+- [Import](https://github.com/wavychat/mjml-parser#import)
+- [Add Variables to your MJML file](https://github.com/wavychat/mjml-parser#add-variables-to-your-mjml-file)
+- [Generate HTML](https://github.com/wavychat/mjml-parser#generate-html)
+- [Typescript support](https://github.com/wavychat/mjml-parser#typescript)
+
 ## Installation
 
 ```bash
