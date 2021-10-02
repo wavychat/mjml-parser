@@ -3,7 +3,7 @@ import path from "path";
 import mjml2html from "mjml";
 import { MJMLParsingOptions } from "mjml-core";
 
-interface IVariables {
+export interface IVariables {
 	[variable: string]: string;
 }
 

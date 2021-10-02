@@ -1,6 +1,6 @@
 <mjml>
-	<mj-body
-		><mj-button
+	<mj-body>
+		<mj-button
 			font-family="Helvetica"
 			background-color="#f45e43"
 			color="white"
