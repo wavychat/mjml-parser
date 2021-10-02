@@ -1,9 +1,10 @@
 {
   "name": "@wavychat/mjml-parser",
-  "author": "yoyo1234",
+  "author": "Johann Buscail <johann@buscail.eu> (https://github.com/johannb75)",
   "private": false,
   "version": "1.0.7",
   "description": "Parse MJML files as templates and add variables to make them customizable",
+  "license": "MIT",
   "main": "build/index.js",
   "types": "build/declaration/index.d.ts",
   "scripts": {
@@ -15,6 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/wavychat/mjml-parser.git"
   },
+  "bugs": {
+    "url": "https://github.com/wavychat/mjml-parser/issues"
+  },
+  "homepage": "https://github.com/wavychat/mjml-parser#readme",
   "keywords": [
     "template",
     "email",
@@ -23,23 +28,18 @@
     "engine",
     "template engine"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wavychat/mjml-parser/issues"
-  },
-  "homepage": "https://github.com/wavychat/mjml-parser#readme",
   "devDependencies": {
     "@types/jest": "^26.0.22",
     "@types/mjml": "^4.7.0",
-    "@types/mjml-core": "^4.7.0",
-    "@types/node": "^14.14.37",
+    "@types/mjml-core": "^4.7.1",
+    "@types/node": "^16.10.2",
     "concurrently": "^6.0.1",
     "jest": "^26.6.3",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.13",
     "ts-jest": "^26.5.4",
-    "typescript": "^4.2.4"
+    "typescript": "^4.4.3"
   },
   "dependencies": {
-    "mjml": "^4.9.1"
+    "mjml": "^4.10.3"
   }
 }
