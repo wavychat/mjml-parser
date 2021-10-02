@@ -1,6 +1,6 @@
-import { mjml2HTML, IVariables } from "../src/index";
+import { mjml2HTML, IGenericVariables } from "../src/index";
 
-interface IMJMLVars extends IVariables {
+interface IMJMLVars extends IGenericVariables {
 	name: string;
 	bye: string;
 }

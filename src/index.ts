@@ -3,11 +3,11 @@ import path from "path";
 import mjml2html from "mjml";
 import { MJMLParsingOptions } from "mjml-core";
 
-export interface IVariables {
+export interface IGenericVariables {
 	[variable: string]: string;
 }
 
-type TMJML2HTML = <IVars extends IVariables = IVariables>(
+type TMJML2HTML = <IVars extends IGenericVariables = IGenericVariables>(
 	mjml_path: string,
 	vars?: Partial<IVars>,
 	options?: MJMLParsingOptions
