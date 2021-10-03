@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.9](https://github.com/wavychat/mjml-parser/compare/v1.0.8...v1.0.9) (2021-10-03)
+
+
+### Bug Fixes
+
+* improves scripts ([58cc6e6](https://github.com/wavychat/mjml-parser/commit/58cc6e67971b0b52856e3c2bd5b56208b18d9b38))
+
 ### 1.0.8 (2021-10-03)
 
 
