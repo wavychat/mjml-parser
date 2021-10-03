@@ -8,11 +8,12 @@
   "main": "build/index.js",
   "types": "build/declaration/index.d.ts",
   "scripts": {
+    "dev:start": "yarn build && concurrently \"tsc -w\" \"nodemon --trace-warnings\"",
     "build": "tsc",
     "recreate-build": "npx rimraf build && yarn build",
-    "prepublish": "yarn recreate-build",
-    "dev:start": "yarn build && concurrently \"tsc -w\" \"nodemon --trace-warnings\"",
-    "dev:jest": "npx jest --watch --detectOpenHandles"
+    "dev:jest": "npx jest --watch --detectOpenHandles",
+    "release": "yarn recreate-build && npx standard-version && git push --follow-tags origin main && npm publish --access public",
+    "prepublish": "yarn recreate-build"
   },
   "repository": {
     "type": "git",
