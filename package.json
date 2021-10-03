@@ -8,8 +8,10 @@
   "main": "build/index.js",
   "types": "build/declaration/index.d.ts",
   "scripts": {
-    "prepublish": "tsc",
-    "dev:start": "tsc && concurrently \"tsc -w\" \"nodemon --trace-warnings\"",
+    "build": "tsc",
+    "recreate-build": "npx rimraf build && yarn build",
+    "prepublish": "yarn recreate-build",
+    "dev:start": "yarn build && concurrently \"tsc -w\" \"nodemon --trace-warnings\"",
     "dev:jest": "npx jest --watch --detectOpenHandles"
   },
   "repository": {
