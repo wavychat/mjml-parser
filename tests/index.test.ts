@@ -1,19 +1,16 @@
-import { mjml2HTML, IGenericVariables } from "../src/index";
+import { mjml2HTML } from "../src/index";
 
-interface IMJMLVars extends IGenericVariables {
-	name: string;
-	bye: string;
+interface IMJMLVars {
+	test: string;
 }
 
-test("should return the file with variables changed", () => {
-	expect(
-		mjml2HTML<IMJMLVars>(
-			__dirname + "/test.mjml",
-			{
-				name: "hi",
-				bye: "ih",
-			},
-			{ validationLevel: "skip" }
-		)
-	).resolves.toContain("hi");
-});
+mjml2HTML<IMJMLVars>({
+	mjmlPath: __dirname + "/test.mjml",
+	mjmlOptions: { validationLevel: "skip" },
+	template: {
+		engine: "ejs",
+		vars: {
+			test: "hi"
+		}
+	}
+}).then(console.log)
