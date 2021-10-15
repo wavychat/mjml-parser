@@ -14,8 +14,6 @@
         "declarationDir": "./build/declaration",
         "outDir": "./build",
         "moduleResolution": "node",
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
         "noImplicitAny": true,
         "strictNullChecks": true,
         "strictFunctionTypes": true,
