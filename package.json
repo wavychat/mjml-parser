@@ -2,7 +2,7 @@
   "name": "@wavychat/mjml-parser",
   "author": "Johann Buscail <johann@buscail.eu> (https://github.com/johannb75)",
   "private": false,
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Parse MJML files as templates and add variables to make them customizable",
   "license": "MIT",
   "main": "build/index.js",

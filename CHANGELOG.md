@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/wavychat/mjml-parser/compare/v1.0.9...v1.1.0) (2021-10-16)
+
+
+### Features
+
+* added multiple compiler and refactored ([493af3f](https://github.com/wavychat/mjml-parser/commit/493af3f4f8ca1638d1110b07ea7b711af364e777))
+* doc ([8001918](https://github.com/wavychat/mjml-parser/commit/8001918104faed6fe8094ea8eaa15afd15d79094))
+* **doc:** moved to github wiki ([01ddcfd](https://github.com/wavychat/mjml-parser/commit/01ddcfdcdcc73c8729b497f76714c2e713fda50e))
+* finished todos ([85fe67a](https://github.com/wavychat/mjml-parser/commit/85fe67a1ed31a83f548e831787503ecf544a3412))
+* new logo ([a9a542c](https://github.com/wavychat/mjml-parser/commit/a9a542c80a243ed27439336288631b32009cc39f))
+* todos ([c91045b](https://github.com/wavychat/mjml-parser/commit/c91045b8a79b406467deaf703dd2b8bfc82b0be3))
+* types, tests ([0d724a5](https://github.com/wavychat/mjml-parser/commit/0d724a57c05d57df79c6815224667161add1e00f))
+
+
+### Bug Fixes
+
+* changed tests ([2a4f839](https://github.com/wavychat/mjml-parser/commit/2a4f839ea73b9bd3b77978774e68cd0d18832f9c))
+* doc url ([011e709](https://github.com/wavychat/mjml-parser/commit/011e709f6ee36eccdd3058628fd85aca6614f912))
+* logo ([7de5e20](https://github.com/wavychat/mjml-parser/commit/7de5e20adef6fbb2b6b68b9ec0d7c03275578453))
+* rename and improve typing ([55d11f3](https://github.com/wavychat/mjml-parser/commit/55d11f3b0cccb0241d5b8a862cdf74fc19636227))
+* tsconfig ([c54d0b2](https://github.com/wavychat/mjml-parser/commit/c54d0b22780b2ab0a3db2bf0475b88e98dfa6db7))
+
 ### [1.0.9](https://github.com/wavychat/mjml-parser/compare/v1.0.8...v1.0.9) (2021-10-03)
 
 
