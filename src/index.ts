@@ -8,12 +8,15 @@ import path from "path";
 import { EJSCompiler, HBSCompiler, UnderscoreCompiler } from "./compilers";
 import { IGenericVariables, IOptions } from "./types";
 
-const defaultOptions: Partial<IOptions<any>> = {
+const defaultOptions: IOptions<IGenericVariables> = {
 	template: {
 		engine: "no-template",
-		vars: {},
+		vars: {}
 	},
-	mjmlOptions: {},
+	mjml: {
+		path: "",
+		options: {},
+	},
 }
 
 /**
@@ -21,48 +24,60 @@ const defaultOptions: Partial<IOptions<any>> = {
  * @returns The HTML of the file with variables replaced by values
  */
 export const mjml2HTMLParser =
-	async <IVars extends IGenericVariables = IGenericVariables>(
+	async <IVars extends IGenericVariables = any>(
 		_options: IOptions<IVars>
 	): Promise<string> => {
 		// overwrite default options by the user's one
-		const options = { ...defaultOptions, ..._options };
+		const options: IOptions<IVars> = {
+			// @ts-expect-error
+			template: {
+				...defaultOptions.template,
+				..._options.template
+			},
+			mjml: {
+				...defaultOptions.mjml,
+				..._options.mjml
+			}
+		}
 
-		// try {
-		const mjmlCode: string = (
-			await fs.promises.readFile(
-				path.join(options.mjmlPath),
-				"utf8"
-			)
-		).trim();
+		console.log(options)
 
-		const htmlCode = mjml2html(mjmlCode, {
-			...options,
-			preprocessors: [
-				options.template?.engine === "underscore" ?
-					UnderscoreCompiler(
-						options.template.vars,
-						options.template.templateOptions
-					)
-					: options.template?.engine === "handlebars" ?
-						HBSCompiler(
+		try {
+			const mjmlCode: string = (
+				await fs.promises.readFile(
+					options.mjml.path,
+					"utf8"
+				)
+			).trim();
+
+			const htmlCode = mjml2html(mjmlCode, {
+				...options,
+				preprocessors: [
+					options.template?.engine === "underscore" ?
+						UnderscoreCompiler(
 							options.template.vars,
-							options.template.compileOptions,
-							options.template.runtimeOptions
+							options.template.options
 						)
-						: options.template?.engine === "ejs" ?
-							EJSCompiler(
+						: options.template?.engine === "handlebars" ?
+							HBSCompiler(
 								options.template.vars,
-								options.template.templateOptions
+								options.template.preCompileOptions,
+								options.template.runtimeOptions
 							)
-							: xml => xml
-			],
-		});
+							: options.template?.engine === "ejs" ?
+								EJSCompiler(
+									options.template.vars,
+									options.template.options
+								)
+								: xml => xml
+				],
+			});
 
-		if (htmlCode.errors[0])
-			throw htmlCode.errors?.[0]?.formattedMessage;
+			if (htmlCode.errors[0])
+				throw htmlCode.errors?.[0]?.formattedMessage;
 
-		return htmlCode.html;
-		// } catch (e) {
-		// 	throw new Error(e);
-		// }
+			return htmlCode.html;
+		} catch (e) {
+			throw new Error(e);
+		}
 	};

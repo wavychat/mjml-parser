@@ -9,10 +9,7 @@ export interface IGenericVariables {
 // TEMPLATE
 
 export interface INoTemplate {
-	/** 
-	 * Which template engine to use.\
-	 * Default: `no-template`
-	 * */
+	/** **Default value** Don't use any template engine */
 	engine: "no-template";
 }
 
@@ -21,7 +18,7 @@ export interface IUnderscoreTemplate {
 	engine: "underscore";
 
 	/** Underscore options */
-	templateOptions?: Underscore.TemplateSettings;
+	options?: Underscore.TemplateSettings;
 }
 
 export interface IEJSTemplate {
@@ -29,7 +26,7 @@ export interface IEJSTemplate {
 	engine: "ejs";
 
 	/** EJS options */
-	templateOptions?: EJS.Options;
+	options?: EJS.Options;
 }
 
 export interface IHBSTemplate {
@@ -37,7 +34,7 @@ export interface IHBSTemplate {
 	engine: "handlebars";
 
 	/** EJS options */
-	compileOptions?: CompileOptions;
+	preCompileOptions?: CompileOptions;
 
 	/** EJS options */
 	runtimeOptions?: Handlebars.RuntimeOptions;
@@ -45,27 +42,30 @@ export interface IHBSTemplate {
 
 export type ITemplate = INoTemplate | IUnderscoreTemplate | IEJSTemplate | IHBSTemplate;
 
-export interface IOptions<IVars> {
-	/** 
-	 * The path to the mjml file.\
-	 * **Required**
-	 * */
-	mjmlPath: string;
+export interface IOptions<IVars extends IGenericVariables = any> {
+	mjml: {
+		/** 
+		 * The path to the mjml file.\
+		 * **Required**
+		 */
+		path: string;
 
-	/** 
-	 * MJML parsing options.\
-	 * Default: `{}`
-	 */
-	mjmlOptions?: MJMLParsingOptions;
+		/** 
+		 * MJML parsing options.\
+		 * Default: `{}`
+		 */
+		options?: MJMLParsingOptions;
+	}
 
-
-
-	template?: ITemplate & {
+	template?: ITemplate & (IVars extends IGenericVariables ? {
+		/** The variables used in the template. */
+		vars: IVars
+	} : {
 		/**
 		 * The variables used in the template.\
 		 * Default: `{}`
 		   * */
-		vars: IVars
-	}
+		vars?: IVars
+	})
 
 }

@@ -6,15 +6,17 @@ interface IMJMLVars {
 	headerTest: string;
 }
 
-mjml2HTMLParser<IMJMLVars>({
-	mjmlPath: __dirname + "/test.mjml",
-	mjmlOptions: { validationLevel: "skip" },
+mjml2HTMLParser({
+	mjml: {
+		path: __dirname + "/test.mjml",
+		options: { validationLevel: "skip" },
+	},
 	template: {
 		engine: "ejs",
 		vars: {
-			test: "hi",
-			headerTest: "string",
-			dirname: __dirname
+			test: "testValue",
+			headerTest: "headerValue",
+			dirname: __dirname,
 		}
 	}
 }).then(console.log)
