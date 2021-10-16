@@ -65,7 +65,7 @@ export interface IOptions<IVars> {
 		 * The variables used in the template.\
 		 * Default: `{}`
 		   * */
-		vars: Partial<IVars>
+		vars: IVars
 	}
 
 }

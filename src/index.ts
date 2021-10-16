@@ -20,7 +20,7 @@ const defaultOptions: Partial<IOptions<any>> = {
  * Convert mjml file to html and replace variables by values
  * @returns The HTML of the file with variables replaced by values
  */
-export const mjml2HTML =
+export const mjml2HTMLParser =
 	async <IVars extends IGenericVariables = IGenericVariables>(
 		_options: IOptions<IVars>
 	): Promise<string> => {
