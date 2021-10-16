@@ -1,6 +1,23 @@
-# mjml-parser
+<p align="center">
+  <a href="https://github.com/wavychat/mjml-parser">
+    <img src="https://raw.githubusercontent.com/wavychat/mjml-parser/main/assets/logo.svg" alt="MJML PARSER" height="400"/>
+  </a>
+</p>
 
-Parse MJML files as templates and add variables to make them customizable
+### Welcome to MJML Parser's documentation!
+
+Parse MJML files as templates and add variables to make them customizable.
+
+[![GitHub issues](https://img.shields.io/github/issues/wavychat/mjml-parser)](https://github.com/wavychat/mjml-parser/issues)
+[![GitHub stars](https://img.shields.io/github/stars/wavychat/mjml-parser)](https://github.com/wavychat/mjml-parser/stargazers)
+[![GitHub license](https://img.shields.io/github/license/wavychat/mjml-parser)](https://github.com/wavychat/mjml-parser/blob/master/LICENSE)
+
+## Features
+- Convert MJML to HTML 💱
+- Easy to use ⚡️
+- 🤗 Complete typing system
+- Multiple template engines 🤝
+- ♾️ Customizable
 
 ## Table of Content
 
@@ -91,3 +108,7 @@ mjml2HTML<IMJMLVariables>(
 ### MJML options
 
 Please read [the official documentation](https://github.com/mjmlio/mjml#inside-nodejs) to have all the official options
+
+
+## License
+MJML Parser © 2022, released under the MIT License.
