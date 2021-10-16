@@ -1,3 +1,2 @@
-- Test `mj-include` with variables
 - Update documentation
 - Publish to npm

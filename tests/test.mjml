@@ -1,5 +1,6 @@
 <mjml>
 	<mj-body>
+			<mj-include path="<%= dirname %>/header.mjml"></mj-include>
 			<mj-raw>
 				<%= test %>
 			</mj-raw>
