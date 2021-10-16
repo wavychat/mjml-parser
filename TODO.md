@@ -1,2 +1,0 @@
-- Update documentation
-- Publish to npm
