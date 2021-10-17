@@ -4,7 +4,7 @@
 
 import mjml2html from "mjml";
 import fs from "fs";
-import path from "path";
+
 import { EJSCompiler, HBSCompiler, UnderscoreCompiler } from "./compilers";
 import { IGenericVariables, IOptions } from "./types";
 
@@ -15,6 +15,7 @@ const defaultOptions: IOptions<IGenericVariables> = {
 	},
 	mjml: {
 		path: "",
+		code: undefined,
 		options: {},
 	},
 }
@@ -40,12 +41,11 @@ export const mjml2HTMLParser =
 			}
 		}
 
-		console.log(options)
-
 		try {
 			const mjmlCode: string = (
+				options.mjml.code ??
 				await fs.promises.readFile(
-					options.mjml.path,
+					options.mjml.path ?? "",
 					"utf8"
 				)
 			).trim();

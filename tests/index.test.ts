@@ -6,7 +6,7 @@ interface IMJMLVars {
 	headerTest: string;
 }
 
-mjml2HTMLParser({
+mjml2HTMLParser<IMJMLVars>({
 	mjml: {
 		path: __dirname + "/test.mjml",
 		options: { validationLevel: "skip" },

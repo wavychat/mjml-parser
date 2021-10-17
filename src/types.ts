@@ -46,9 +46,15 @@ export interface IOptions<IVars extends IGenericVariables = any> {
 	mjml: {
 		/** 
 		 * The path to the mjml file.\
-		 * **Required**
+		 * **Required if `code` property isn't provided **
 		 */
-		path: string;
+		path?: string;
+
+		/** 
+		 * The mjml code.\
+		 * **Required if `path` property isn't provided **
+		 */
+		code?: string;
 
 		/** 
 		 * MJML parsing options.\
