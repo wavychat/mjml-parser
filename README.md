@@ -4,7 +4,7 @@
   </a>
 </p>
 
-### Welcome to MJML Parser's documentation!
+### Welcome to MJML Parser's documentation! [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Easily%20convert%20MJML%20to%20HTML%20by%20using%20your%20favorite%20template%20engine%20to%20dynamically%20customize%20your%20mails%20!&url=https://github.com/wavychat/mjml-parser/wiki&via=wavychat&hashtags=email,mjml,templates,marketing,developers)
 
 Parse MJML files as templates and add variables to make them customizable.
 
