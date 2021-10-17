@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/wavychat/mjml-parser/compare/v1.1.1...v1.2.0) (2021-10-17)
+
+
+### Features
+
+* **doc:** twitter button ([837b024](https://github.com/wavychat/mjml-parser/commit/837b024ef6289075add7e492bda54f2738ec0b5b))
+* new code property ([606838e](https://github.com/wavychat/mjml-parser/commit/606838e595054c09808a4f78247cbd2458ebe85b))
+
 ### [1.1.1](https://github.com/wavychat/mjml-parser/compare/v1.1.0...v1.1.1) (2021-10-16)
 
 ## [1.1.0](https://github.com/wavychat/mjml-parser/compare/v1.0.9...v1.1.0) (2021-10-16)
